@@ -49,9 +49,14 @@ func main() {
 
             log.Println("session temp dir:", path)
 
-            out, err := exec.Command("bash", "-c", fmt.Sprintf("./run.sh %s %s %s", homework, path, id)).CombinedOutput()
+            out, err := exec.Command("bash", "-c", fmt.Sprintf("./run.sh %s %s %s", homework, path, id)).Output()
             if err != nil {
                 http.Error(w, err.Error(), http.StatusInternalServerError)
+                return
+            }
+
+            if len(out) == 0 {
+                fmt.Fprintf(w, "Killed by timeout (5 sec)")
                 return
             }
 
