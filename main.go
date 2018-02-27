@@ -56,7 +56,7 @@ func main() {
             }
 
             if len(out) == 0 {
-                fmt.Fprintf(w, "Killed by timeout (5 sec)")
+                fmt.Fprintf(w, "Killed by timeout (10 sec)")
                 return
             }
 
