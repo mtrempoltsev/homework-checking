@@ -6,4 +6,4 @@ ADD main.cpp .
 ADD numbers.dat .
 ADD test.py .
 
-CMD g++ main.cpp -o test -O2 --std=c++14 2> /out/out.txt && python ./test.py > /out/out.txt
+CMD g++ main.cpp -o test -O2 --std=c++14 2> /out/out.txt && python ./test.py > /out/tmp.txt && mv /out/tmp.txt /out/out.txt
