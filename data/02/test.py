@@ -13,7 +13,7 @@ def test(command, expected_code, expected_value):
     if code != expected_code:
         print 'return value', expected_code, '(expected) !=', code
         return
-    if expected_code != -1:
+    if expected_code != 255:
         i = 0
         for line in out:
             try:
