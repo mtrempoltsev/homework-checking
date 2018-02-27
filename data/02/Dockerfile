@@ -1,6 +1,6 @@
 FROM gliderlabs/alpine
 
-RUN apk --no-cache add build-base
+RUN apk --no-cache add build-base python
 
 ADD main.cpp .
 ADD numbers.dat .
