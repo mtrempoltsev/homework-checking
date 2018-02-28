@@ -18,7 +18,7 @@ def test(command, expected_code, expected_value):
         for line in out:
             try:
                 if int(line) != expected_value[i]:
-                    print expected_value, '(expected) !=', out[0]
+                    print expected_value[i], '(expected) !=', out[0]
                     return
                 i += 1
             except ValueError:
@@ -27,7 +27,7 @@ def test(command, expected_code, expected_value):
             except IndexError:
                 print 'invalid output'
                 return
-        if i == 0:
+        if i != len(expected_value):
             print 'empty output'
             return
     print 'ok'
