@@ -2,7 +2,7 @@
 #include <limits>
 #include <sstream>
 
-#include "bigint.h"
+#include "main.cpp"
 
 std::string toString(const BigInt& value)
 {
