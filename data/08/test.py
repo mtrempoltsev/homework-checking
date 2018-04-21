@@ -8,6 +8,7 @@ def run(command):
     return code, out
 
 def test(command, expected_code, expected_value):
+    print command
     code, out = run(command)
     if code != expected_code:
         print 'return value', expected_code, '(expected) !=', code
