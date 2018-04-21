@@ -13,6 +13,8 @@ def test(command, expected_code, expected_value):
     if code != expected_code:
         print 'return value', expected_code, '(expected) !=', code
         return
+    if code != 0:
+        return
     i = 0
     for line in out:
         try:
