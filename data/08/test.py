@@ -40,3 +40,5 @@ start = time.time()
 run('./test book.txt')
 finish = time.time()
 print finish - start, 'sec'
+
+print 'my time: 0.626339912415 sec'
