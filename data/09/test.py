@@ -8,7 +8,7 @@ def isPing(line):
     quit()
 
 n = 0
-with open("pingpong.txt") as file:
+with open("/out/pingpong.txt") as file:
     line = file.readline()
     if not line:
         print("empty output")
