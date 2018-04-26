@@ -7,7 +7,7 @@ def isPing(line):
     print("not ping not pong")
     quit()
 
-n = 0
+n = 1
 with open("/out/pingpong.txt") as file:
     line = file.readline()
     if not line:
@@ -24,7 +24,7 @@ with open("/out/pingpong.txt") as file:
         n += 1
 
 if n < 500000:
-    print(n, "< 1000000")
+    print(n, "< 500000")
     quit()
 
 print("ok")
